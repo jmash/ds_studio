@@ -12,10 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App/>} />
-      <Route path="software" element={<Software />} />
-      <Route path="support" element={<Support />} />
-      <Route path="order" element={<Order />} />
+      <Route path="/" element={<App/>}>
+        <Route path="software" element={<Software />} />
+        <Route path="support" element={<Support />} />
+        <Route path="order" element={<Order />} />
+      </Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
