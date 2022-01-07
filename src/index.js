@@ -7,12 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import Software from './routes/software';
 import Support from './routes/support';
 import Order from './routes/order';
+import Main from './routes/main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}>
+        <Route index element={<Main />} />
         <Route path="software" element={<Software />} />
         <Route path="support" element={<Support />} />
         <Route path="order" element={<Order />} />
