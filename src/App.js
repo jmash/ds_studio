@@ -1,16 +1,32 @@
 import './App.css';
 import { Outlet, Link } from "react-router-dom";
+import { Container, Nav, NavDropdown } from 'react-bootstrap';
 
 function App() {
   return (
-    <div>
-      <header>
-        <Link to="/software">Software</Link> | {" "}
-        <Link to="/support">Support</Link> | {" "}
-        <Link to="/order">Order</Link>
-      </header>
-      <Outlet />
-    </div>
+    <>
+      <Container className="justify-content-center text-center">
+        <h1><del>Allen St</del> Software</h1>
+        <Nav className="justify-content-center">
+          <NavDropdown title="Software" id="nav-software">
+            <NavDropdown.Item eventKey="1.1">
+              Window Inverter
+            </NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Item>
+            <Nav.Link eventKey="2">
+              <Link to="/support">Support</Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link eventKey="3">
+              <Link to="/order">Order</Link>
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <Outlet />
+      </Container>
+    </>
   );
 }
 
