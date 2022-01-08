@@ -10,7 +10,7 @@ function App() {
         <Nav className="justify-content-center">
           <NavDropdown title="Software" id="nav-software">
             <NavDropdown.Item eventKey="1.1">
-              Window Inverter
+              <Link to="/productdetails">Window Inverter</Link>
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item>
