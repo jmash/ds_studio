@@ -8,6 +8,7 @@ import Software from './routes/software';
 import Support from './routes/support';
 import Order from './routes/order';
 import Main from './routes/main';
+import ProductDetails from './routes/productdetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="software" element={<Software />} />
         <Route path="support" element={<Support />} />
         <Route path="order" element={<Order />} />
+        <Route path="productdetails" element={<ProductDetails /> } />
       </Route>
     </Routes>
   </BrowserRouter>,
