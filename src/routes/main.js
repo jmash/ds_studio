@@ -11,7 +11,7 @@ export default function Main() {
                         Window Inverter
                     </Col>
                     <Col>
-                        Screenshot
+                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
                 <Row>
@@ -19,7 +19,7 @@ export default function Main() {
                         Echidna Salivation Dessicator
                     </Col>
                     <Col>
-                        Screenshot
+                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
                 <Row>
@@ -27,7 +27,7 @@ export default function Main() {
                         Chicken Chow Mein Prognositicator
                     </Col>
                     <Col>
-                        Screenshot
+                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
                 <Row>
@@ -35,7 +35,7 @@ export default function Main() {
                         Snickers Dick Vein Sclerotherapy Lazer
                     </Col>
                     <Col>
-                        Screenshot
+                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
             </Stack>
