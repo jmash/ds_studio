@@ -6,7 +6,7 @@ export default function Main() {
         <Container>
             <h2>Software Offerings:</h2>
             <Stack gap={4}>
-                <Row>
+                <Row className="align-items-center">
                     <Col>
                         Window Inverter
                     </Col>
@@ -14,7 +14,7 @@ export default function Main() {
                         <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="align-items-center">
                     <Col>
                         Echidna Salivation Dessicator
                     </Col>
@@ -22,7 +22,7 @@ export default function Main() {
                     <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="align-items-center">
                     <Col>
                         Chicken Chow Mein Prognositicator
                     </Col>
@@ -30,7 +30,7 @@ export default function Main() {
                     <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="align-items-center">
                     <Col>
                         Snickers Dick Vein Sclerotherapy Lazer
                     </Col>
