@@ -1,12 +1,18 @@
-import { Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 export default function Support() {
     return (
       <main style={{ padding: "1rem 0" }}>
-        <h2>Support</h2>
-        <Card>
-            Email: _david's email but obfuscated_
-        </Card>
+        <Container>
+          <h2 className="text-md-start text-center">Support</h2>
+          <Row>
+            <Col>
+              <Card>
+                  Email: _david's email but obfuscated_
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </main>
     );
   }

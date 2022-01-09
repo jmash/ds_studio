@@ -3,8 +3,8 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 export default function ProductDetails() {
     return (
       <main style={{ padding: "1rem 0" }}>
-          <h2 className="text-center">Product Details</h2>
           <Container>
+            <h2 className="text-md-start text-center">Product Details</h2>
             <Row>
               <Col>
                 <h3 className="text-center text-sm-center text-md-start">Window Inverter</h3>
@@ -17,16 +17,20 @@ export default function ProductDetails() {
               </Col>
             </Row>
             <Row>
-                <Col style={{textAlign: "left"}}>
+                <Col>
                     <h3>$4.99</h3>
                 </Col>
             </Row>
             <Row>
-                <Col style={{textAlign: "left"}}>
+                <Col>
                     <h4>Info</h4>
                     <section className="">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit ac nunc eleifend faucibus. Suspendisse ac maximus purus. Praesent efficitur, ex in euismod dignissim, lectus felis iaculis augue, imperdiet tincidunt orci nisl ut ante. Aenean eget efficitur ante. Nunc vulputate nibh sit amet leo ullamcorper vestibulum. Nullam at odio id felis malesuada porttitor. Nam egestas lacinia mollis. Quisque quis ultricies neque, eu maximus eros.
                     </section>
+                </Col>
+            </Row>
+            <Row className="mt-2">
+                <Col>
                     <h4>Trial Info</h4>
                     <section>
                         Etiam ligula purus, bibendum quis sollicitudin vitae, fermentum non tellus. Quisque tincidunt imperdiet mi ac laoreet. Fusce vel felis mi. Ut eget purus ac urna ornare ornare at ut ante. Vestibulum faucibus vel orci nec porta. Pellentesque eget neque ut neque vehicula elementum ut eget orci. 
