@@ -3,16 +3,16 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 export default function ProductDetails() {
     return (
       <main style={{ padding: "1rem 0" }}>
-          <h2>Product Details</h2>
+          <h2 className="text-center">Product Details</h2>
           <Container>
             <Row>
-              <Col style={{textAlign: "left"}}>
-                <h3>Window Inverter</h3>
+              <Col>
+                <h3 className="text-center text-sm-center text-md-start">Window Inverter</h3>
               </Col>
-              <Col xs="left" sm="left" md="auto">
+              <Col className="text-center text-sm-center mb-2 mb-sm-2 mb-md-0" md="auto">
                 <Button>Try</Button>
               </Col>
-              <Col xs="left" sm="left" md="auto">
+              <Col className="text-center text-sm-center mb-2 mb-sm-2 mb-md-0" md="auto"> 
                 <Button>Order (4.99)</Button>
               </Col>
             </Row>
