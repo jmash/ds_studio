@@ -5,8 +5,8 @@ import { Container, Nav, NavDropdown } from 'react-bootstrap';
 function App() {
   return (
     <>
-      <Container className="justify-content-center text-center">
-        <h1><Link to="/"><del>Allen St</del> Software</Link></h1>
+      <Container>
+        <h1 className="text-center"><Link to="/"><del>Allen St</del> Software</Link></h1>
         <Nav className="justify-content-center">
           <NavDropdown title="Software" id="nav-software">
             <NavDropdown.Item eventKey="1.1">
