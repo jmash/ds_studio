@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 
 export default function ProductDetails() {
     return (
@@ -33,12 +33,37 @@ export default function ProductDetails() {
                     </section>
                 </Col>
             </Row>
-            <Row>
-                <p>Carousel will go here</p>
+            <Row className="mt-3">
+                <Col>
+                    <Carousel>
+                        <Carousel.Item>
+                            <Row>
+                                <Col>
+                                    <img
+                                        src="https://via.placeholder.com/150"
+                                        alt="First slide"
+                                    ></img>
+                                </Col>
+                                <Col>
+                                    <img c
+                                        src="https://via.placeholder.com/150"
+                                        alt="Second slide"
+                                    ></img>
+                                </Col>
+                                <Col>
+                                    <img
+                                        src="https://via.placeholder.com/150"
+                                        alt="Second slide"
+                                    ></img>
+                                </Col>
+                            </Row>
+                        </Carousel.Item>
+                    </Carousel>
+                </Col>
             </Row>
-            <Row>
+            <Row className="mt-3">
                 <Col style={{textAlign: "left"}}>
-                    <a>Download Trial</a>
+                    <Button>Download Trial</Button>
                 </Col>
                 <Col style={{textAlign: "right"}}>
                     <Button>Order</Button>
