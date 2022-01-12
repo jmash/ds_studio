@@ -7,36 +7,44 @@ export default function Main() {
             <h2>Software Offerings:</h2>
             <Stack gap={4}>
                 <Row className="align-items-center">
+                    <Col className="col-1 col-md-2"></Col>
                     <Col>
-                        Window Inverter
+                        <h3>Window Inverter</h3>
                     </Col>
-                    <Col>
+                    <Col className="text-end">
                         <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
+                    <Col className="col-1 col-md-2"></Col>
                 </Row>
                 <Row className="align-items-center">
+                    <Col className="col-1 col-md-2"></Col>
                     <Col>
-                        Echidna Salivation Dessicator
+                        <h3>Echidna Salivation Dessicator</h3>
                     </Col>
-                    <Col>
-                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
+                    <Col className="text-end">
+                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
+                    <Col className="col-1 col-md-2"></Col>
                 </Row>
                 <Row className="align-items-center">
+                    <Col className="col-1 col-md-2"></Col>
                     <Col>
-                        Chicken Chow Mein Prognositicator
+                        <h3>Chicken Chow Mein Prognositicator</h3>
                     </Col>
-                    <Col>
-                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
+                    <Col className="text-end">
+                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
+                    <Col className="col-1 col-md-2"></Col>
                 </Row>
                 <Row className="align-items-center">
+                    <Col className="col-1 col-md-2"></Col>
                     <Col>
-                        Snickers Dick Vein Sclerotherapy Lazer
+                        <h3>Snickers Dick Vein Sclerotherapy Lazer</h3>
                     </Col>
-                    <Col>
-                    <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
+                    <Col className="text-end">
+                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
                     </Col>
+                    <Col className="col-1 col-md-2"></Col>
                 </Row>
             </Stack>
             <Row>
