@@ -1,9 +1,11 @@
 import { Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import cx from 'classnames';
+import sitenavbarStyles from './Sitenavbar.module.css';
 
 export default function SiteNavbar() {
     return (
-        <Nav className="justify-content-center">
+        <Nav className={ cx(sitenavbarStyles.Sitenavbar, "justify-content-center text-center")}>
           <NavDropdown title="Software" id="nav-software">
             <NavDropdown.Item eventKey="1.1">
               <Link to="/productdetails">Window Inverter</Link>

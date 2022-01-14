@@ -1,10 +1,8 @@
 import './App.css';
 import { Outlet, Link } from "react-router-dom";
 import { Container } from 'react-bootstrap';
-import SiteNavbar from './ui/navbar';
+import SiteNavbar from './ui/SiteNavbar/Sitenavbar';
 import { useEffect } from 'react';
-
-
 
 function App() {
   
@@ -14,7 +12,7 @@ function App() {
     return () => {
       document.body.classList.remove('bg-black', 'text-light');
     }
-  })
+  });
 
   return (
     <>

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('RobotoCondensed-Light'), url(../../fonts/RobotoCondensed-Light.ttf) format('truetype');
+}
+
+.Sitenavbar {
+  background-color: #282c34;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+  color: white;
+}
+
+.Sitenavbar > * {
+  min-width: 8em;
+  text-decoration: none;
+}
