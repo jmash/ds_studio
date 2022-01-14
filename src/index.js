@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App/>}>
+      <Route path="/" element={<App />}>
         <Route index element={<Main />} />
         <Route path="software" element={<Software />} />
         <Route path="support" element={<Support />} />
