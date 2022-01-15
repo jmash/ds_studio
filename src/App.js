@@ -1,7 +1,7 @@
 import './App.css';
 import { Outlet, Link } from "react-router-dom";
 import { Container } from 'react-bootstrap';
-import SiteNavbar from './ui/SiteNavbar/Sitenavbar';
+import SiteNavbar from './ui/SiteNavbar/SiteNavbar';
 import { useEffect } from 'react';
 
 function App() {
