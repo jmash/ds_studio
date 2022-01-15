@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import Software from './routes/software';
-import Support from './routes/support';
-import Order from './routes/order';
-import Main from './routes/main';
-import ProductDetails from './routes/productdetails';
+import Software from './routes/Software/Software';
+import Support from './routes/Support/Support';
+import Order from './routes/Order/Order';
+import Main from './routes/Main/Main';
+import ProductDetails from './routes/ProductDetails/ProductDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
