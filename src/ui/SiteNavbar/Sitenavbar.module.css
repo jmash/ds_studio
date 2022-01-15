@@ -3,13 +3,14 @@
   src: local('RobotoCondensed-Light'), url(../../fonts/RobotoCondensed-Light.ttf) format('truetype');
 }
 
-.Sitenavbar {
+.SiteNavbar {
   background-color: #282c34;
   font-family: 'Roboto', 'Arial', 'sans-serif';
   color: white;
+  text-decoration: none;
 }
 
-.Sitenavbar > * {
+.SiteNavbar > * {
   min-width: 8em;
-  text-decoration: none;
+ 
 }
