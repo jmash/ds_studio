@@ -2,11 +2,11 @@ import { Container, Row, Col, Button, Stack } from "react-bootstrap";
 
 export default function Order() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main className="py-3">
         <Container>
-        <h2 className="text-md-start text-center">Order</h2>
-            <Stack gap={3}>
-                <Row>
+        <h2 className="text-center text-md-start text-center">Order</h2>
+            <Stack className="px-3" gap={3}>
+                <Row className="rounded bg-secondary">
                     <Col className="text-center text-sm-center text-md-start">
                         <h3>Window Inverter</h3> 
                     </Col>
