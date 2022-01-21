@@ -1,9 +1,23 @@
 // default variable overrides
 $body-bg: #fff;
-// $dark: blue;
 $body-color: #232;
 $border-color: #555;
-$nav-link-color: #ccc;
+$nav-link-color: green;
 $primary: green;
+$link-decoration: none;
+$font-family-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/utilities";
+
+$utilities: (
+    "order-rows" (
+        property: background-color,
+        values: (
+            odd
+        )
+    )
+)
