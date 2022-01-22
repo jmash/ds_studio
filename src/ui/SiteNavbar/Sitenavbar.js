@@ -6,7 +6,7 @@ import siteNavbarStyles from './SiteNavbar.module.css';
 export default function SiteNavbar() {
     return (
         <Nav className={ cx(siteNavbarStyles.SiteNavbar, "shadow-sm justify-content-center text-center")}>
-          <NavDropdown className="border-start border-end" title="Software" id="nav-software">
+          <NavDropdown className="dropdown-dark border-start border-end" title="Software" id="nav-software">
             <NavDropdown.Item eventKey="1.1">
               <Link to="/productdetails">Window Inverter</Link>
             </NavDropdown.Item>
