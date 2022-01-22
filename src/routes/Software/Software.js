@@ -1,6 +1,6 @@
 export default function Software() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main className="py-3">
         <h2>Software</h2>
       </main>
     );
