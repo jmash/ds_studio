@@ -2,7 +2,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 export default function Support() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main className="py-3">
         <Container>
           <h2 className="text-md-start text-center">Support</h2>
           <Row>
