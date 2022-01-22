@@ -2,8 +2,8 @@ import { Container, Row, Col, Stack } from 'react-bootstrap';
 
 export default function Main() {
     return (
-      <main style={{ padding: "1rem 0" }}>
-        <Container>
+      <main className="py-3">
+        <Container className="">
             <h2>Software Offerings:</h2>
             <Stack gap={4}>
                 <Row className="align-items-center">
