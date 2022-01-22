@@ -2,7 +2,7 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 
 export default function ProductDetails() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main className="py-3">
           <Container>
             <h2 className="text-md-start text-center">Product Details</h2>
             <Row>
