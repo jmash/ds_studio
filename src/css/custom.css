@@ -3380,7 +3380,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #00e600;
+  background-color: #383f45;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
@@ -3440,8 +3440,8 @@ textarea.form-control-lg {
   margin-left: -0.5rem;
   border-bottom: 0; }
   .card-header-tabs .nav-link.active {
-    background-color: #00e600;
-    border-bottom-color: #00e600; }
+    background-color: #383f45;
+    border-bottom-color: #383f45; }
 
 .card-header-pills {
   margin-right: -0.5rem;
