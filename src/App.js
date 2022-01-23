@@ -10,7 +10,7 @@ function App() {
     document.body.classList.add('bg-dark', 'text-light');
 
     return () => {
-      document.body.classList.remove('bg-black', 'text-light');
+      document.body.classList.remove('bg-dark', 'text-light');
     }
   });
 
