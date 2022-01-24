@@ -1,18 +1,39 @@
 
-$border-color: #555;
-$nav-link-color: green;
 $primary: green;
+$border-color: #555;
+$nav-link-color: lighten($primary, 10%);
+$link-color: lighten($primary, 10%);
 $dark-rgb: rgb(33, 37, 41);
 $link-decoration: none;
 $card-bg: lighten($dark-rgb, 10%);
+$dropdown-bg: $dark-rgb;
+$dropdown-link-hover-bg: lighten($dark-rgb, 10%);
 $font-family-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+.alt-shade-rows > *:nth-child(odd) {
+    background-color: lighten($dark-rgb, 5%);
+}
 
-// $utilities
+.alt-shade-rows > *:nth-child(even) {
+    background-color: lighten($dark-rgb, 10%);
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/mixins';
 @import '../node_modules/bootstrap/scss/utilities';
 @import '../node_modules/bootstrap/scss/utilities/api';
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "nav-item": (
+            property: background-color,
+            class: nav-item,
+            state: hover,
+            values: shade-color($dark-rgb, 10%),
+        )
+    )
+);
