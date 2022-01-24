@@ -2,15 +2,15 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 
 export default function ProductDetails() {
     return (
-      <main className="py-3">
+      <main className="py-3 text-center text-md-start">
           <Container>
-            <h2 className="text-md-start text-center">Product Details</h2>
+            <h2 className="text-center text-md-start ">Product Details</h2>
             <Row>
               <Col>
-                <h3 className="text-center text-sm-center text-md-start">Window Inverter</h3>
+                <h3 className="w-25 text-center text-md-start">Window Inverter</h3>
               </Col>
               <Col className="text-center text-sm-center mb-2 mb-sm-2 mb-md-0" md="auto">
-                <Button>Try</Button>
+                <Button className="btn-block">Try</Button>
               </Col>
               <Col className="text-center text-sm-center mb-2 mb-sm-2 mb-md-0" md="auto"> 
                 <Button>Order (4.99)</Button>
