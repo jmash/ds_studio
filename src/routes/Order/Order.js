@@ -4,9 +4,9 @@ export default function Order() {
     return (
       <main className="py-3">
         <Container>
-        <h2 className="text-center text-md-start text-center">Order</h2>
-            <Stack className="px-3" gap={3}>
-                <Row className="rounded bg-secondary">
+        <h2 className="border-bottom text-center text-md-start text-center">Order</h2>
+            <Stack className="alt-shade-rows px-3" gap={3}>
+                <Row className="rounded">
                     <Col className="text-center text-sm-center text-md-start">
                         <h3 className="mb-2 mt-2">Window Inverter</h3> 
                     </Col>
