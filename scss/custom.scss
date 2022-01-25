@@ -8,6 +8,10 @@ $link-decoration: none;
 $card-bg: lighten($dark-rgb, 10%);
 $dropdown-bg: $dark-rgb;
 $dropdown-link-hover-bg: lighten($dark-rgb, 10%);
+@font-face {
+    font-family: 'Roboto';
+    src: local('RobotoCondensed-Light'), url(../fonts/RobotoCondensed-Light.ttf) format('truetype');
+}
 $font-family-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 .alt-shade-rows > *:nth-child(odd) {
