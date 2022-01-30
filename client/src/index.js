@@ -9,7 +9,6 @@ import Support from './routes/Support/Support';
 import Order from './routes/Order/Order';
 import Main from './routes/Main/Main';
 import ProductDetails from './routes/ProductDetails/ProductDetails';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/custom.css';
 
 
