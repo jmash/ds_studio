@@ -1,43 +1,41 @@
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 
 export default function Main() {
+    const [products, setProducts] = useState([]);
+
+    const getProducts = async() => {
+        try {
+            const response = await fetch("http://localhost:5000/products");
+            const jsonData = await response.json();
+
+            setProducts(jsonData);
+            console.log(jsonData);
+            console.log(document.location);
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    useEffect(() => {
+        getProducts();
+    }, []);
+
     return (
       <main className="py-3">
         <Container className="">
             <h2 className="border-bottom pb-1">Software Offerings</h2>
             <Stack className="mx-auto alt-shade-rows w-75 pb-2" gap={4}>
-                <Row className="rounded py-2 border-bottom align-items-center">
-                    <Col className="text-center text-md-start">
-                        <h3>Window Inverter</h3>
-                    </Col>
-                    <Col className="text-center text-md-end">
-                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
-                    </Col>
-                </Row>
-                <Row className="rounded py-2 border-bottom align-items-center">
-                    <Col className="text-center text-md-start">
-                        <h3>Echidna Salivation Dessicator</h3>
-                    </Col>
-                    <Col className="text-center text-md-end">
-                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
-                    </Col>
-                </Row>
-                <Row className="rounded py-2 border-bottom align-items-center">
-                    <Col className="text-center text-md-start">
-                        <h3>Chicken Chow Mein Prognositicator</h3>
-                    </Col>
-                    <Col className="text-center text-md-end">
-                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
-                    </Col>
-                </Row>
-                <Row className="rounded py-2 border-bottom align-items-center">
-                    <Col className="text-center text-md-start">
-                        <h3>Snickers Dick Vein Sclerotherapy Lazer</h3>
-                    </Col>
-                    <Col className="text-center text-md-end">
-                        <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
-                    </Col>
-                </Row>
+                {products.map(product => (
+                    <Row key={product.product_id} className="rounded py-2 border-bottom align-items-center">
+                        <Col className="text-center text-md-start">
+                            <h3>{product.product_name}</h3>
+                        </Col>
+                        <Col className="text-center text-md-end">
+                            <img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/>
+                        </Col>
+                    </Row>
+                ))}
             </Stack>
             <Row className="border-top pt-2">
                 <Col>
