@@ -10,14 +10,14 @@ export default function SiteNavbar() {
               <Link to="/productdetails">Window Inverter</Link>
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Item className="">
+          <Nav.Item>
             <Nav.Link as={Link} to="/support" eventKey="2">
-              <Link to="/support">Support</Link>
+              <span>Support</span>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className="border-start border-end">
             <Nav.Link as={Link} to="/order" eventKey="3">
-              <Link to="/order">Order</Link>
+              <span>Order</span>
             </Nav.Link>
           </Nav.Item>
         </Navbar>
