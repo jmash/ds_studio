@@ -66,10 +66,10 @@ export default function ProductDetails() {
                 </Col>
             </Row>
             <Row className="mt-3">
-                <Col style={{textAlign: "left"}}>
+                <Col className="text-start">
                     <Button>Download Trial</Button>
                 </Col>
-                <Col style={{textAlign: "right"}}>
+                <Col className="text-end" >
                     <Button>Order</Button>
                 </Col>
             </Row>
