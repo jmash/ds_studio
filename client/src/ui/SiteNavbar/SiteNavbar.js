@@ -7,7 +7,7 @@ export default function SiteNavbar() {
         <Navbar className="pt-0 pb-0 shadow-sm justify-content-center text-center">
           <NavDropdown className="border-start border-end" title="Software" id="nav-software">
             <NavDropdown.Item eventKey="1.1">
-              <Link to="/productdetails">Window Inverter</Link>
+              <Link tag="span" to="/productdetails">Window Inverter</Link>
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item>
