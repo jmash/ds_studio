@@ -9,6 +9,8 @@ import Support from './routes/Support/Support';
 import Order from './routes/Order/Order';
 import Main from './routes/Main/Main';
 import ProductDetails from './routes/ProductDetails/ProductDetails';
+import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
 import './css/custom.css';
 
 
