@@ -25,3 +25,6 @@ yarn-error.log*
 # hour notes
 hour_notes*
 proj_details*
+
+# temp sql files
+./server/*.sql
