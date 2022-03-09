@@ -22,7 +22,7 @@ ReactDOM.render(
         <Route path="software" element={<Software />} />
         <Route path="support" element={<Support />} />
         <Route path="order" element={<Order />} />
-        <Route path="productdetails" element={<ProductDetails /> } />
+        <Route path="productdetails/:productName" element={<ProductDetails /> } />
       </Route>
     </Routes>
   </BrowserRouter>,
