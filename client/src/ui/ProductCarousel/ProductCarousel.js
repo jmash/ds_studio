@@ -13,18 +13,6 @@ export default function ProductCarousel() {
         }).mount();
     }, []);
 
-    const getProduct = async() => {
-        try {
-            const response = await fetch(`http://localhost:5000/productcarousel/${productName}`);
-            const jsonData = await response.json();
-
-            setProduct(jsonData);
-            console.log(jsonData);
-        } catch (err) {
-            console.error(err.message);
-        }
-    }
-
     return (
         <div className="glide">
             <div className="glide__track" data-glide-el="track">
