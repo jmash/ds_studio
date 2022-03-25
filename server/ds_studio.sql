@@ -8,4 +8,4 @@ CREATE TABLE products (
     trial_info text
 );
 
-INSERT INTO products VALUES (1, "/images/test", "Hyperchondriaker", 10.0, "/link/to/installer", "This thing is awesome", "Really fuckin' cool I mean it");
+INSERT INTO products VALUES (1, "/images/test", "Hyperchondriaker", 10.0, "/link/to/installer", "Testing that this works", "It seems to be working.");
