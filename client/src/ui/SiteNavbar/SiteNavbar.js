@@ -12,7 +12,6 @@ export default function SiteNavbar() {
             const jsonData = await response.json();
 
             setProducts(jsonData);
-            // console.log(jsonData);
         } catch (err) {
             console.error(err.message);
         }
