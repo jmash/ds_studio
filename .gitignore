@@ -31,3 +31,5 @@ proj_details*
 
 # environment variable files
 .env
+server/.env.development
+server/.env.production
