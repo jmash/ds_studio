@@ -1,3 +1,10 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -7,6 +14,16 @@ const fs = require("fs");
 //middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'));
+fs.readdir(__dirname + "/public/product_carousel", (err, files) => {
+    if (err) {
+        console.log(err);
+    } else {
+        files.forEach(file => {
+            app.use('/product_carousel', express.static(file));
+        })
+    }
+});
 
 // routes
 
@@ -16,35 +33,21 @@ app.get("/products", async(req, res) => {
         const allProducts = await pool.query("SELECT * FROM products");
         res.json(allProducts.rows);
     } catch (err) {
-        console.error(err.message);
+        res.status(500).end();
     }
 });
-
-// // get specific product by id
-// app.get("/products/:id", async(req, res) => {
-//     try {
-//         const { id } = req.params;
-//         const product = await pool.query("SELECT * FROM products WHERE product_id = $1", [id]);
-//         res.json(product.rows[0]);
-//         console.log(req.params);
-//     } catch (err) {
-//         console.error(err.message);
-//     }
-// });
 
 app.get("/productcarousel/:link", (req, res) => {
     try {
         const { link } = req.params;
-        const linkFiles = [];
-        const readLinkDir = fs.readdir(`./product_carousel/${link}`, (err, files) => {
+        const readLinkDir = fs.readdir(`./public/product_carousel/${link}`, (err, files) => {
             if(err) {
                 console.error(err);
             }
             res.json(files);
         });
-
     } catch (err) {
-        console.error(err.message);
+        res.status(500).end();
     }
 });
 
@@ -56,7 +59,7 @@ app.get("/products/:name", async(req, res) => {
         res.json(product.rows[0]);
         console.log(req.params);
     } catch (err) {
-        console.error(err.message);
+        res.status(500).end();
     }
 });
 
