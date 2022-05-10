@@ -28,3 +28,6 @@ proj_details*
 
 # temp sql files
 ./server/*.sql
+
+# environment variable files
+.env
