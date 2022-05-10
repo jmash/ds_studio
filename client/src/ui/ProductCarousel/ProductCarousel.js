@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Glide from '@glidejs/glide';
+import PropTypes from 'prop-types';
 
-export default function ProductCarousel() {
+export default function ProductCarousel(props) {
+
     useEffect(() => {
         new Glide('.glide', {
             type: 'slider',
@@ -11,19 +13,16 @@ export default function ProductCarousel() {
             perView: 3,
             focusAt: 'center'
         }).mount();
-    }, []);
+    }, [props.productImages]);
 
     return (
         <div className="glide">
+            <h1>{ props.productImages[4] }</h1>
             <div className="glide__track" data-glide-el="track">
                 <ul className="glide__slides">
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
-                    <li className="glide__slide"><img src="https://via.placeholder.com/150" alt="Window Inverter Thumbnail"/></li>
+                    { props.productImages.map((productImage, index) => (
+                        <li key={ index } className="glide__slide"><img width={150} src={`http://localhost:5000/product_carousel/${props.productLink}/${productImage}`} alt="Window Inverter Thumbnail"/></li>
+                    ))}
                 </ul>
             </div>
             <div className="glide__arrows" data-glide-el="controls">
@@ -34,15 +33,10 @@ export default function ProductCarousel() {
                     <FontAwesomeIcon icon={faArrowRight} />
                 </button>
             </div>
-            <div className="glide__bullets" data-glide-el="controls[nav]">
-                <button className="glide__bullet" data-glide-dir="=0"></button>
-                <button className="glide__bullet" data-glide-dir="=1"></button>
-                <button className="glide__bullet" data-glide-dir="=2"></button>
-                <button className="glide__bullet" data-glide-dir="=3"></button>
-                <button className="glide__bullet" data-glide-dir="=4"></button>
-                <button className="glide__bullet" data-glide-dir="=5"></button>
-                <button className="glide__bullet" data-glide-dir="=6"></button>
-            </div>
         </div>
     )
+}
+
+ProductCarousel.propTypes = {
+    productLink: PropTypes.string
 }

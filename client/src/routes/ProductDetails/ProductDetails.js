@@ -2,33 +2,58 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useParams, useLocation } from 'react-router';
 import ProductCarousel from '../../ui/ProductCarousel/ProductCarousel';
-
+//http://localhost:5000/productcarousel/${prodJsonData.product_link}`
 export default function ProductDetails() {
-    const { productName } = useParams();
     const [product, setProduct] = useState([]);
-    const [carouselImages, setCarouselImages] = useState([]);
+    const [productImages, setProductImages] = useState([]);
+    const { productName } = useParams();
+
     const location = useLocation();
 
-    const getProduct = async() => {
-        try {
-            const response = await fetch(`http://localhost:5000/products/${productName}`);
-            const jsonData = await response.json();
+    useEffect(() => {
 
-            setProduct(jsonData);
-            console.log(jsonData);
-        } catch (err) {
-            console.error(err.message);
+        const getProduct = async() => {
+            try {
+                console.log("firing before loading the product");
+                const prodResponse = await fetch(`http://localhost:5000/products/${productName}`);
+                const prodResponseData = await prodResponse.json();
+
+                setProduct(prodResponseData);
+                
+            } catch (err) {
+                console.error(err.message);
+            }
         }
-    }
+        
+        getProduct();
+    }, [location.key, productName]);
 
     useEffect(() => {
-        getProduct();
-    }, [location.key]);
+
+        const getCarouselImages = async() => {
+            console.log("getting carousel images");
+            try {
+                if(product.product_name) {
+                    console.log("this should fire after loading the product");
+                    const carouselResponse = await fetch(`http://localhost:5000/productcarousel/${product.product_name}`);
+                    const carouselResponseData = await carouselResponse.json();
+                    setProductImages(carouselResponseData);
+                    console.log(carouselResponseData);
+                }
+
+            } catch (err) {
+                console.error(err.message);
+            }
+        }
+
+        getCarouselImages();
+    }, [product]);
 
     return (
       <main className="py-3 text-center text-md-start">
           <Container>
-            <h2 className="border-bottom text-center text-md-start ">Product Details</h2>
+            <h2 className="border-bottom text-center text-md-start">Product Details</h2>
+            <Container className="mx-1">
             <Row>
               <Col className="mx-auto">
                 <h3>{product.product_name}</h3>
@@ -63,7 +88,7 @@ export default function ProductDetails() {
                 </Row>
                 <Row className="mt-3">
                     <Col>
-                        <ProductCarousel />
+                        <ProductCarousel productLink={product.product_link} productImages={productImages} />
                     </Col>
                 </Row>
             <Row className="mt-3">
@@ -74,7 +99,7 @@ export default function ProductDetails() {
                     <Button>Order</Button>
                 </Col>
             </Row>
-
+            </Container>
           </Container>
       </main>
     );
