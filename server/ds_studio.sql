@@ -1,3 +1,5 @@
+CREATE DATABASE ds_studio;
+
 CREATE TABLE products (
     product_id int,
     images_link varchar(255),
