@@ -27,10 +27,7 @@ hour_notes*
 proj_details*
 
 # temp sql files
-./server/*.sql
-
-# any sql files
-*.sql
+server/*.sql
 
 # environment variable files
 .env
