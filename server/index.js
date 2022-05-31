@@ -1,6 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+require('dotenv').config();
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
@@ -11,6 +9,10 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 const fs = require("fs");
+const validInfo = require("./middleware/validInfo");
+const authorize = require("./middleware/authorize");
+const bcrypt = require("bcrypt");
+const jwtGenerator = require("./utils/jwtGenerator");
 
 //middleware
 app.use(cors());
@@ -64,7 +66,7 @@ app.get("/products/:name", async(req, res) => {
     }
 });
 
-router.post("/register", validInfo, async (req, res) => { // TODO: Create validInfo middleware
+app.post("/register", validInfo, async (req, res) => { // TODO: Create validInfo middleware
     const { email, name, password } = req.body;
 
     try {
@@ -91,7 +93,7 @@ router.post("/register", validInfo, async (req, res) => { // TODO: Create validI
     }
 });
 
-router.post("/login", validInfo, async (req, res) => {
+app.post("/login", validInfo, async (req, res) => {
     const { email, password } = req.body;
   
     try {
