@@ -10587,3 +10587,27 @@ textarea.form-control-lg {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   text-align: center; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: green; }
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: larger;
+  color: #00b300; }
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: #00e600; }
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3); }
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #007b00; }
+
+.navbar-light .navbar-nav .show > .nav-link:hover,
+.navbar-light:hover .navbar-nav:hover .nav-link.active:hover {
+  color: #00e600; }
+
+.nav-link.active {
+  color: #00e600; }
