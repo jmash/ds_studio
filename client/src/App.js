@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center pt-2 mb-0 border-bottom App-header"><Link className="text-decoration-none" to="/"><del>Allen St</del> Software</Link></h1>
+      <h1 className="text-center py-2 mb-0 border-bottom App-header"><Link className="text-decoration-none" to="/"><del>Allen St</del> Software</Link></h1>
       <SiteNavbar />
       <Container>
         <Outlet />
