@@ -23,7 +23,6 @@ $font-family-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetic
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/mixins';
@@ -38,7 +37,7 @@ $utilities: map-merge(
             class: nav-item,
             state: hover,
             values: shade-color($dark-rgb, 10%),
-        )
+        ), 
     )
 );
 
@@ -71,6 +70,30 @@ $utilities: map-merge(
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
     text-align: center;
-  }
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: $primary;
+}
 
+.navbar-light .navbar-nav .nav-link {
+    font-size: larger;
+    color: lighten($primary, 10%); }
+    .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+      color: lighten($primary, 20%); }
+    .navbar-light .navbar-nav .nav-link.disabled {
+      color: rgba(0, 0, 0, 0.3); }
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: darken($primary, 1%);
+}
+
+.navbar-light .navbar-nav .show > .nav-link:hover,
+.navbar-light:hover .navbar-nav:hover .nav-link.active:hover {
+    color: lighten($primary, 20%);
+}
+
+.nav-link.active {
+    color: lighten($primary, 20%);
+}
