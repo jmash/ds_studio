@@ -16,7 +16,10 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center py-2 mb-0 border-bottom App-header"><Link className="text-decoration-none" to="/"><del>Allen St</del> Software</Link></h1>
+      <div className="position-relative">
+        <Link className="position-absolute" to="/login">Login</Link>
+        <h1 className="text-center py-2 mb-0 border-bottom App-header"><Link className="text-decoration-none" to="/"><del>Allen St</del> Software</Link></h1>
+      </div>
       <SiteNavbar />
       <Container>
         <Outlet />
