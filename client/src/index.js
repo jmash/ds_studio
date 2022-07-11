@@ -8,6 +8,8 @@ import Software from './routes/Software/Software';
 import Support from './routes/Support/Support';
 import Order from './routes/Order/Order';
 import Main from './routes/Main/Main';
+import Purchased from './routes/Purchased/Purchased';
+import Login from './routes/Login/Login';
 import ProductDetails from './routes/ProductDetails/ProductDetails';
 import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
@@ -22,6 +24,8 @@ ReactDOM.render(
         <Route path="software" element={<Software />} />
         <Route path="support" element={<Support />} />
         <Route path="order" element={<Order />} />
+        <Route path="purchased" element={<Purchased />} />
+        <Route path="login" element={<Login />} />
         <Route path="productdetails/:productName" element={<ProductDetails /> } />
       </Route>
     </Routes>
