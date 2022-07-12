@@ -97,3 +97,12 @@ $utilities: map-merge(
 .nav-link.active {
     color: lighten($primary, 20%);
 }
+
+.login-label {
+    min-width: 110px;
+    letter-spacing: 2px;
+}
+
+.login-submit-btn {
+    letter-spacing: 10px;
+}

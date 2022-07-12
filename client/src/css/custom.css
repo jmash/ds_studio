@@ -10611,3 +10611,10 @@ textarea.form-control-lg {
 
 .nav-link.active {
   color: #00e600; }
+
+.login-label {
+  min-width: 110px;
+  letter-spacing: 2px; }
+
+.login-submit-btn {
+  letter-spacing: 10px; }
