@@ -10,6 +10,7 @@ import Order from './routes/Order/Order';
 import Main from './routes/Main/Main';
 import Purchased from './routes/Purchased/Purchased';
 import Login from './routes/Login/Login';
+import Register from './routes/Register/Register';
 import ProductDetails from './routes/ProductDetails/ProductDetails';
 import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="order" element={<Order />} />
         <Route path="purchased" element={<Purchased />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="productdetails/:productName" element={<ProductDetails /> } />
       </Route>
     </Routes>
