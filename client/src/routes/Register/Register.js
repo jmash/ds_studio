@@ -16,8 +16,13 @@ const Register = props => {
                     <div className="row">
                         <div className="input-group">
                             <input aria-describedby="email_input_label" aria-label="Enter Email Here" className="p-3 form-control" {...register("email", { 
-                                    required: "* Email is required",
-                                    pattern: "([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])"
+                                    required: { 
+                                        value: true, 
+                                        message: "* Email is required" },
+                                    pattern: {
+                                        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                        message: "* Invalid email address"
+                                    }
                                 })} 
                                 placeholder="Email" type="email"></input>
                         </div>
@@ -38,9 +43,7 @@ const Register = props => {
                             </input>
                         </div>
                         <div className="pt-0 pb-1 my-0">
-                            {errors.name && errors.name.type === "required" && (
-                                <span role="alert">Password Required</span>
-                            )}
+                                <span role="alert">{errors.password?.message}</span>
                         </div>
                     </div>
                 </div>
@@ -51,12 +54,9 @@ const Register = props => {
                 </div>
             </form>
         </div>
-        
     </>
   )
 }
-
-//([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])"
 
 // Register.propTypes = {};
 
